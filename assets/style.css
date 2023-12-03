@@ -1,46 +1,240 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  word-wrap: break-word;
+  font-family: "Cinzel", serif;
+  text-transform: capitalize;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #999;
+  overflow-x: hidden !important;
+  background: black;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #999;
+  margin-bottom: 20px;
 }
 
-header h1 {
-    margin: 0;
+h1 {
+  font-size: 45px;
 }
 
-section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+h2 {
+  font-size: 40px;
 }
 
-.services .service {
-    margin-bottom: 20px;
+h4 {
+  font-size: 30px;
 }
 
-blockquote {
-    font-style: italic;
-    border-left: 2px solid #333;
-    padding-left: 10px;
-    margin-bottom: 20px;
+h1,
+h2,
+h4 {
+  font-weight: 600;
+  line-height: 1.25em;
+  margin: 0 0 20px 0;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #f4f4f4;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  padding: 1.2rem 6%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar .logo-wrapper {
+  height: 29px;
+  overflow: hidden;
+}
+
+.logo-wrapper a {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.logo-wrapper a strong {
+  font-size: 25px;
+  color: #fff;
+  letter-spacing: -5px;
+}
+
+.navbar .navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 40px;
+}
+
+.navbar .navbar-links a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+}
+
+.navbar .navbar-links a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.header {
+  background-image: url(./images/header.jpg);
+  min-height: 100vh;
+  background-color: #111;
+  background-position: top right;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  min-height: 100vh;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+}
+
+.header .box {
+  max-width: 50%;
+  min-width: 300px;
+}
+
+.header .box h1 {
+  color: #fff;
+}
+
+.header .box .btn {
+  padding: 0.25rem 1rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 14px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.about-img {
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-img .img:before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  left: 45px;
+  bottom: 0;
+  background-color: white;
+}
+.about-img .img:after {
+  content: "";
+  width: 50%;
+  position: absolute;
+  top: -8%;
+  bottom: 55%;
+  left: -5%;
+  background-image: url(./images/dots.png);
+  background-repeat: repeat;
+  z-index: 0;
+}
+
+.about-img .img {
+  width: 300px;
+  padding: 0 30px 30px 15px;
+  position: relative;
+}
+
+.about-img .img img {
+  position: relative;
+  z-index: 2;
+  background: #1b1b1b;
+  height: 300px;
+}
+
+.about-img img:hover {
+  transform: scale(0.95);
+}
+
+.about ul {
+  padding: 1rem 0rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.about ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.about ul li i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #444;
+  color: #fff;
+  font-size: 12px;
+}
+
+.about ul span {
+  color: #333;
+}
+
+.about-bottom {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1rem;
+  border-top: 1px solid #f1f1f1;
+  padding: 1rem;
+}
+
+.signature {
+  width: 80px;
 }
